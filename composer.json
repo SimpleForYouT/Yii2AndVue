@@ -1,5 +1,5 @@
 {
-    "name": "yii2AndVue",
+    "name": "mthoer/yii2AndVue",
     "description": "Yii 2 and Vue Basic Project Template",
     "keywords": ["yii2", "framework", "basic", "project template", "vuejs"],
     "homepage": "http://www.yiiframework.com/",
