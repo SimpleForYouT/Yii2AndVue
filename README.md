@@ -33,6 +33,7 @@ this folder is the vue project.
 
 How to use for production
 ------------
+
 1. run the build script in `web/vue/package.json`. 
 After the build process is complete a new folder will be created under 
 web the `prod` folder. This folder contains all the files built for vue.
