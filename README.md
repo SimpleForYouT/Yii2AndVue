@@ -2,6 +2,8 @@ Yii2 and Vue Project
 ------------
 You can use this template to create a website with yii2 and vuejs.
 
+composer create-project --prefer-dist simpleforyou/yii2-and-vue basic
+
 Directory Structure
 -------------------
 
