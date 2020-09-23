@@ -7,7 +7,7 @@ return [
     'enablePrettyUrl' => true,
     'showScriptName' => false,
     'rules' => [
-        '/' => 'session/index',
+        '/' => 'site/index',
         /*
         '/other-page' => 'session/index',
         '/my-page' => 'session/index'
