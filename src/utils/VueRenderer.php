@@ -31,7 +31,7 @@ class VueRenderer {
     }
     
     private static function getVueBasePath() {
-        return $_SERVER['DOCUMENT_ROOT'] . '/web/prod';
+        return $_SERVER['DOCUMENT_ROOT'] . '/prod';
     }
     
     private static function getFiles($path) {
@@ -41,6 +41,8 @@ class VueRenderer {
             $fileExplode = explode('/', $file);
             $files[filemtime($file)][] = end($fileExplode);
         }
+        if(count($files) === 0)
+            return [];
         $newestFilesIndex = max(array_keys($files));
         $newestFiles = $files[$newestFilesIndex];
         
