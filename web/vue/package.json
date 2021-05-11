@@ -1,21 +1,23 @@
 {
   "name": "yii2andvue",
-  "version": "0.0.1",
+  "version": "0.2.1",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "preinstall": "npx npm-force-resolutions"
   },
   "dependencies": {
-    "css-loader": "^3.4.2",
-    "less": "^3.11.1",
-    "less-loader": "^5.0.0",
-    "vue": "^2.6.11",
-    "vue-router": "^3.1.6"
+    "css-loader": "^5.2.4",
+    "less": "^4.1.1",
+    "less-loader": "^7.3.0",
+    "vue": "^2.6.12",
+    "vue-router": "^3.5.1"
   },
   "devDependencies": {
-    "@vue/cli-service": "^4.2.3",
-    "vue-template-compiler": "^2.6.11"
+    "@vue/cli-service": "^4.5.13",
+    "on-build-webpack": "^0.1.0",
+    "vue-template-compiler": "^2.6.12"
   },
   "postcss": {
     "plugins": {
@@ -25,5 +27,8 @@
   "browserslist": [
     "> 1%",
     "last 2 versions"
-  ]
+  ],
+  "resolutions": {
+    "postcss": "8.2.10"
+  }
 }

@@ -31,13 +31,13 @@ class VueRenderer {
     }
     
     private static function getVueBasePath() {
-        return $_SERVER['DOCUMENT_ROOT'] . '/prod';
+        return $_SERVER['DOCUMENT_ROOT'] . 'web/prod';
     }
     
     private static function getFiles($path) {
-        $jsFiles = glob(self::getVueBasePath() . '/' . $path . '/*.' . $path . '');
+        $prodFiles = glob(self::getVueBasePath() . '/' . $path . '/*.' . $path . '');
         $files = [];
-        foreach($jsFiles as $file) {
+        foreach($prodFiles as $file) {
             $fileExplode = explode('/', $file);
             $files[filemtime($file)][] = end($fileExplode);
         }
@@ -46,13 +46,15 @@ class VueRenderer {
         $newestFilesIndex = max(array_keys($files));
         $newestFiles = $files[$newestFilesIndex];
         
-        foreach($jsFiles as $file) {
+        foreach($prodFiles as $file) {
             $fileExplode = explode('/', $file);
             $fileName = end($fileExplode);
             if(!in_array($fileName, $newestFiles)) {
                 $mapFile = $file . '.map';
-                unlink($file);
-                unlink($mapFile);
+                if(file_exists($file))
+                    unlink($file);
+                if(file_exists($mapFile))
+                    unlink($mapFile);
             }
         }
         

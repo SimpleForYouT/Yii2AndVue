@@ -9,8 +9,8 @@ return [
     'rules' => [
         '/' => 'site/index',
         /*
-        '/other-page' => 'session/index',
-        '/my-page' => 'session/index'
+        '/other-page' => 'site/index',
+        '/my-page' => 'site/index'
         */
     ]
 ];
