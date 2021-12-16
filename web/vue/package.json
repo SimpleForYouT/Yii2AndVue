@@ -7,17 +7,23 @@
     "build": "vue-cli-service build",
     "preinstall": "npx npm-force-resolutions"
   },
+  "resolutions": {
+    "glob-parent": "^5.1.2",
+    "ansi-regex": "^5.0.1",
+    "nth-check": "^2.0.1"
+  },
   "dependencies": {
-    "css-loader": "^5.2.4",
-    "less": "^4.1.1",
-    "less-loader": "^7.3.0",
-    "vue": "^2.6.12",
-    "vue-router": "^3.5.1"
+    "css-loader": "^6.5.1",
+    "less": "^4.1.2",
+    "less-loader": "^10.2.0",
+    "vue": "^2.6.14",
+    "vue-router": "^3.5.3"
   },
   "devDependencies": {
-    "@vue/cli-service": "^4.5.13",
+    "@vue/cli-service": "^4.5.15",
     "on-build-webpack": "^0.1.0",
-    "vue-template-compiler": "^2.6.12"
+    "vue-template-compiler": "^2.6.14",
+    "webpack": "^5.65.0"
   },
   "postcss": {
     "plugins": {

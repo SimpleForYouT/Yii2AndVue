@@ -5,7 +5,7 @@
  * Datum: 29.05.2020 10:20
  */
 
-use app\src\utils\VueRenderer;
+use app\common\utils\VueRenderer;
 
 ?>
 <div id="app"></div>

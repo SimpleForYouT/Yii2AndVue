@@ -5,7 +5,7 @@
  * Datum: 29.05.2020 14:11
  */
 
-namespace app\src\utils;
+namespace app\common\utils;
 
 class VueRenderer {
     

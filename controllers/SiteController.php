@@ -13,6 +13,8 @@ use yii\web\Controller;
 
 class SiteController extends Controller {
     
+    public $enableCsrfValidation = false;
+    
     public function behaviors() {
         if(Yii::$app->params['develop']) {
             // for local start
@@ -20,11 +22,11 @@ class SiteController extends Controller {
                 'corsFilter' => [
                     'class' => Cors::class,
                     'cors' => [
-                        'Origin' => ['YOUR_MAIN_PAGE', 'https://csa.simpleforyou.de'],
+                        'Origin' => ['http://localhost:8080', 'YOUR_MAIN_PAGE'],
                         'Access-Control-Request-Method' => ['POST', 'GET', 'PUT', 'DELETE', 'OPTIONS'],
                         'Access-Control-Allow-Credentials' => true,
                         'Access-Control-Max-Age' => 3600,
-                        'Access-Control-Allow-Headers' => ['authorization', 'X-Requested-With', 'content-type', 'access-control-allow-origin', 'YOUR_COSTOM_HEADER'],
+                        'Access-Control-Allow-Headers' => ['authorization', 'X-Requested-With', 'content-type', 'access-control-allow-origin', 'YOUR_CUSTOM_HEADER'],
                         'Access-Control-Allow-Origin' => ['http://localhost:8080', 'YOUR_MAIN_PAGE']
                     ],
                 ],

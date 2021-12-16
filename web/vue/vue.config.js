@@ -11,6 +11,8 @@ module.exports = {
                 const newlyCreatedAssets = stats.compilation.assets;
                 removeEntries('js');
                 removeEntries('css');
+                removeEntries('img');
+                removeEntries('fonts');
                 function removeEntries(pathToRemove){
                     fs.readdir(path.resolve(__dirname, `../prod/${pathToRemove}`), (err, files) => {
                         files.forEach(file => {

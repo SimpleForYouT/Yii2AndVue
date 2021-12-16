@@ -3,7 +3,7 @@
 /* @var $this \yii\web\View */
 /* @var $content string */
 
-use app\src\utils\VueRenderer;
+use app\common\utils\VueRenderer;
 use yii\helpers\Html;
 use app\assets\AppAsset;
 

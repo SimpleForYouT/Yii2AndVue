@@ -7,9 +7,14 @@
 
 namespace app\models;
 
+use yii\db\ActiveRecord;
 use yii\web\IdentityInterface;
 
-class User implements IdentityInterface {
+class User extends ActiveRecord implements IdentityInterface {
+
+    public static function tableName(): string {
+        return 'YOUR_USER_DB_TABLE';
+    }
     
     public static function findIdentity($id) {
         // TODO: Implement findIdentity() method.
